@@ -7,9 +7,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ResponseHandler {
-    public static ResponseEntity<Object> getResponse(String message, Boolean isSuccess, HttpStatus status, Object data){
+    public static ResponseEntity<Object> getResponse(String message, Boolean isSuccess,Integer statusCode, HttpStatus status, Object data){
         Map<String,Object> map = new HashMap<String,Object>();
         map.put("status",status.value());
+        map.put("statusCode",statusCode);
         map.put("isSuccess",isSuccess);
         map.put("message",message);
         map.put("data",data);

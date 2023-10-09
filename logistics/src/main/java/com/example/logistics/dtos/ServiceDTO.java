@@ -1,7 +1,6 @@
 package com.example.logistics.dtos;
 
 public class ServiceDTO {
-
     private String name;
     private String description;
     private double stairPrice;
